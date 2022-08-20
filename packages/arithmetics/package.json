@@ -1,0 +1,19 @@
+{
+    "name": "arithmetics",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watchAll",
+        "sync": "node scripts/syncREADME.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "jest": "^27.0.6",
+        "jsdom": "^16.6.0"
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "ks-common-utils",
+  "version": "0.1.0",
+  "description": "使用ts封装的一些工具",
+  "scripts": {
+    "build": "rm -rf dist && npm run build:es2015 && npm run build:cjs",
+    "build:es2015": "tsc --declaration --downlevelIteration --skipLibCheck --jsx react --module es2015 --target es2015 --outDir dist/es2015",
+    "build:cjs": "tsc --declaration --downlevelIteration --skipLibCheck --jsx react --module commonjs --target es5 --outDir dist/cjs",
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage",
+    "deploy": "sh ./scripts/deploy.sh",
+    "version": "node scripts/version.js"
+  },
+  "keywords": [
+    "typescripts",
+    "utils"
+  ],
+  "author": "kennys_wang",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/react": "^10.4.3",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^14.14.21",
+    "@types/react": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-spellcheck": "0.0.14",
+    "jest": "^26.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rxjs": "^7.2.0",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.7"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/es2015/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ]
+}
